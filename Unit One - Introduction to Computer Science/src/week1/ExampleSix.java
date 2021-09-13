@@ -32,7 +32,7 @@ public class ExampleSix {
         int g = 3; 
         int f = 3; 
 
-        int test 1 = 2 * g++; 
-        int test 2 = 2 * ++f; 
+        int test_1 = 2 * g++; 
+        int test_2 = 2 * ++f; 
     }
 }
