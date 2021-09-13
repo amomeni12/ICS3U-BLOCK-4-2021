@@ -22,5 +22,17 @@ public class ExampleSix {
 
         System.out.println(13 % 3); 
         y = y % 2; 
+
+        int s = 5; 
+        s++; 
+        ++s; 
+        s--; 
+        --s; 
+
+        int g = 3; 
+        int f = 3; 
+
+        int test 1 = 2 * g++; 
+        int test 2 = 2 * ++f; 
     }
 }
