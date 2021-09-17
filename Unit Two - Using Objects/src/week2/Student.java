@@ -37,6 +37,32 @@ public class Student {
   }
 
   /**
+   * overloading a method is when you have multiple methods with the same name but different args/paramaters
+   * @param name
+   * @param studentNumber
+   */
+  public Student(String name, String studentNumber) {
+    this.name = name;
+    this.studentNumber = studentNumber;
+    this.grade = 9;
+    this.totalMarks = 0;
+    this.numMarks = 0;
+    this.average = 0;
+  }
+
+  /**
+   * Returns the name of the student -- non void method (void methods return nothing) (non-void methods return something)
+   * @return
+   */
+  public String getName(){
+    return name; 
+  }
+
+  public double getAverage(){
+    return average; 
+  }
+
+  /**
    * displayName, displayStudentNumber, increaseGrade, displayGrade The methods
    * (actions) in a class define behaviour for the class
    */
