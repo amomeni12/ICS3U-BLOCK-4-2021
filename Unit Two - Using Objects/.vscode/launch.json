@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch RandomExamples",
+            "request": "launch",
+            "mainClass": "week2.RandomExamples",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringExamples",
+            "request": "launch",
+            "mainClass": "week2.StringExamples",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch StudentExample",
+            "request": "launch",
+            "mainClass": "week2.StudentExample",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch MathClassExamples",
+            "request": "launch",
+            "mainClass": "week3.MathClassExamples",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch RandomNumberExamples",
+            "request": "launch",
+            "mainClass": "week3.RandomNumberExamples",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch WrapperClassExamples",
+            "request": "launch",
+            "mainClass": "week3.WrapperClassExamples",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        }
+    ]
+}
