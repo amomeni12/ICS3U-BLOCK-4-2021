@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BayviewGlenPools",
+            "request": "launch",
+            "mainClass": "week4.BayviewGlenPools",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch tess",
+            "request": "launch",
+            "mainClass": "week3.tess",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
