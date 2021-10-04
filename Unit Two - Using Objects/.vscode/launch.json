@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch UsingScanner",
+            "request": "launch",
+            "mainClass": "week5.UsingScanner",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch usingscanner",
+            "request": "launch",
+            "mainClass": "week5.usingscanner",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch ifStatementExamples",
+            "request": "launch",
+            "mainClass": "week4.ifStatementExamples",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExtraPractice",
+            "request": "launch",
+            "mainClass": "week4.ExtraPractice",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
             "name": "Launch BayviewGlenPools",
             "request": "launch",
             "mainClass": "week4.BayviewGlenPools",
