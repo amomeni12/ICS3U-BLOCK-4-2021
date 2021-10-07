@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CrossCountry",
+            "request": "launch",
+            "mainClass": "week5.CrossCountry",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
+            "name": "Launch FormattingString",
+            "request": "launch",
+            "mainClass": "week5.FormattingString",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
             "name": "Launch UsingScanner",
             "request": "launch",
             "mainClass": "week5.UsingScanner",
