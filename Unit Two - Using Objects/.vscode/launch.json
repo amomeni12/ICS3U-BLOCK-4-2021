@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ForLoops",
+            "request": "launch",
+            "mainClass": "week6.ForLoops",
+            "projectName": "Unit Two - Using Objects_634fb32"
+        },
+        {
+            "type": "java",
             "name": "Launch CrossCountry",
             "request": "launch",
             "mainClass": "week5.CrossCountry",
