@@ -1,6 +1,6 @@
 package week7;
 
-//Final 
+//final
 
 //Importing scanner class
 import java.util.Scanner;
@@ -104,6 +104,7 @@ public class CrazyEights {
             } catch (InterruptedException e) {
 
             }
+            System.out.println("Your hand: " + playerHand); 
             String temp = processPlayer(playerHand, topCard, in);
             playerHand = temp.substring(0, temp.indexOf("-"));
             topCard = temp.substring(temp.indexOf("-") + 1); 
@@ -112,24 +113,21 @@ public class CrazyEights {
             } catch (InterruptedException e) {
 
             }
-            if(playerHand.length() == 0){
-                break; 
+            if(playerHand.length() != 0){
+                temp = processComputer(c1Hand, topCard, playerHand, c2Hand, in, 1); 
+                c1Hand = temp.substring(0, temp.indexOf("-"));
+                topCard = temp.substring(temp.indexOf("-") + 1); 
             }
-            temp = processComputer(c1Hand, topCard, playerHand, c2Hand, in, 1); 
-            c1Hand = temp.substring(0, temp.indexOf("-"));
-            topCard = temp.substring(temp.indexOf("-") + 1); 
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
 
             }
-            if(c1Hand.length() == 0){ 
-                break; 
+            if(c1Hand.length() != 0 && playerHand.length() != 0){
+                temp = processComputer(c2Hand, topCard, playerHand, c1Hand, in, 2);
+                c2Hand = temp.substring(0, temp.indexOf("-"));
+                topCard = temp.substring(temp.indexOf("-") + 1); 
             }
-            temp = processComputer(c2Hand, topCard, playerHand, c1Hand, in, 2);
-            c2Hand = temp.substring(0, temp.indexOf("-"));
-            topCard = temp.substring(temp.indexOf("-") + 1); 
-            System.out.println("Your hand: " + playerHand); 
         }
         
         return countScore(playerHand) + "-" + countScore(c1Hand) + "-" + countScore(c2Hand);
@@ -191,7 +189,7 @@ public class CrazyEights {
             System.out.println("New hand: " + playerHand); 
             System.out.println("Current Top card: " + topCard); 
         }
-        if(numDrawn == 4){
+        if(numDrawn > 4){
             System.out.println("You can no longer play this turn - next player's turn");
             System.out.println("Top Card Stays As: " + topCard); 
             return playerHand.trim().replace("  ", " ") + "-" + topCard.trim();  
@@ -315,6 +313,7 @@ public class CrazyEights {
         compHand = compHand.trim(); 
         playerHand = playerHand.trim(); 
         topCard = topCard.trim();
+        String oldTopCard = topCard; 
 
         if(playerHand.length() <= 3 && playerHand.length() > 0){
             String suit = findSuit(playerHand); 
@@ -323,9 +322,9 @@ public class CrazyEights {
                 topCard = rule4Eight(suit, num); 
             }
             else{
-                topCard = rule4Rank(currentHand, rank, suit, topCard); 
+                topCard = rule4Rank(currentHand, rank, suit, topCard, oldTopCard); 
             }
-            if(!topCard.equals("")){
+            if(!topCard.equals(oldTopCard)){
                 currentHand = currentHand.trim().replaceFirst(topCard, ""); 
                 currentHand = currentHand.trim();
                 displayCards(currentHand);
@@ -342,9 +341,9 @@ public class CrazyEights {
                 topCard = rule4Eight(suit, num); 
             }
             else{
-                topCard = rule4Rank(currentHand, rank, suit, topCard); 
+                topCard = rule4Rank(currentHand, rank, suit, topCard, oldTopCard); 
             }
-            if(!topCard.equals("")){
+            if(!topCard.equals(oldTopCard)){
                 currentHand = currentHand.trim().replaceFirst(topCard, ""); 
                 currentHand = currentHand.trim();
                 displayCards(currentHand);
@@ -391,6 +390,7 @@ public class CrazyEights {
 
         
         if(currentHand.trim().replaceFirst(topCard, "").length() < 2){
+            currentHand = currentHand.trim().replaceFirst(topCard, ""); 
             System.out.println("Computer " + num + " placed a " + topCard); 
             System.out.println("Computer " + num + " Wins The Round!"); 
             return currentHand.trim().replace("  ", " ") + "-" + topCard.trim(); 
@@ -435,7 +435,7 @@ public class CrazyEights {
      * otherwise it will just return the top card that was already selected in process computer
      * @return
      */
-    private static String rule4Rank(String currentHand, String rank, String suit, String topCard) {
+    private static String rule4Rank(String currentHand, String rank, String suit, String topCard, String oldTopCard) {
         if(rank.equals("10")){
             for(int i = 0; i < currentHand.length() - 2; i++){
                 String current = (currentHand.substring(i, i + 2)); 
@@ -453,7 +453,7 @@ public class CrazyEights {
                     }
                 }
             }
-            return ""; 
+            return oldTopCard; 
         }
         else{
             for(int i = 0; i < currentHand.length() - 1; i++){
@@ -472,7 +472,7 @@ public class CrazyEights {
                     }
                 }
             }
-            return ""; 
+            return oldTopCard; 
         }
             
     }
