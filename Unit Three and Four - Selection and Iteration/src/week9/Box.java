@@ -25,6 +25,19 @@ public class Box extends Rectangle {
       return 2 * super.getArea() + height * getLength() * 2 + height * getWidth() * 2;
    }
 
+   public double getPerimeter(){
+      return 2 * super.getPerimeter() + 4 * height; 
+   }
+
+   public boolean equals(Object obj){
+      if(super.equals(obj)){
+         if(obj instanceof Box){
+            return height == ((Box) obj).height; 
+         }
+      }
+      return false; 
+   }
+
    public boolean isCube() {
       return isSquare() && height == getLength();
    }

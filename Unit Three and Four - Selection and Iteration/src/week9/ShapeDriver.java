@@ -5,6 +5,9 @@ public class ShapeDriver {
       Rectangle rect1 = new Rectangle(4, 5);
       Rectangle rect2 = new Rectangle(7.5);
 
+      Box b1 = new Box(4,4,5); 
+      b1.getArea(); 
+      
       if (rect1.isSquare())
          System.out.println("Rect 1 is a square.");
       else
