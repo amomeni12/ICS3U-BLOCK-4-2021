@@ -1,5 +1,7 @@
 package week10;
 
+//final 
+
 /******************************************************************************
  * A DoubleArraySequence is a collection of double numbers. The sequence can
  * have a special "current element," which is specified and accessed through
